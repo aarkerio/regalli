@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   def update_rank
     score = Game.where(user_id: id).average(:yscore)
     save!
-    rank = User.all.order(:score).map(&:id).index(id)
+    rank = User.all.order(:score).map(&:id).index(id) + 1
     save!
     increment!(:played)
   end
