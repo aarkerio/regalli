@@ -11,9 +11,11 @@
   </thead>
 
   <tbody>
+    <% rank = 0 %>
     <% @users.each do |user| %>
+      <% rank = rank + 1 %>
       <tr>
-        <td><%= user.rank %></td>
+        <td><%= rank %></td>
         <td><%= user.name %></td>
         <td><%= user.score %></td>
         <td><%= user.played %></td>
