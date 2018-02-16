@@ -22,21 +22,10 @@ ActiveRecord::Schema.define(version: 20180215210120) do
     t.integer  "trate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "oponent"
+    t.integer  "oponent_id"
   end
 
   add_index "games", ["user_id"], name: "index_games_on_user_id"
-
-  create_table "ranks", force: :cascade do |t|
-    t.integer  "rank"
-    t.integer  "user_id"
-    t.integer  "score"
-    t.integer  "played"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "ranks", ["user_id"], name: "index_ranks_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

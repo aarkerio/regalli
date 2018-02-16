@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-RSpec.describe Test, type: :model do
+RSpec.describe Game, type: :model do
 
-  let(:game)  { FactoryGirl.create :game}
+  let(:game)  { FactoryBot.create :game}
 
   context 'Saves and update ranks' do
     describe '#saves file' do
